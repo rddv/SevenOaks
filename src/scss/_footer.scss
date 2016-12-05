@@ -1,0 +1,219 @@
+footer{
+  float: left;
+  width: 100%;
+  padding-bottom: 35px;
+}
+
+.contact{
+  .container{
+    max-width: 770px;
+    @include w992{
+      max-width: 750px;
+    }
+  }
+  float: left;
+  width: 100%;
+  .message-field{
+    position: relative;
+    float: left;
+    width: 50%;
+    @include w540{
+      width: 100%;
+    }
+    .title{
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 20px;
+      h3{
+        display: inline-block;
+        width: 100%;
+        color: $text-color;
+        font-weight: 400;
+      }
+    }
+
+    &:first-child{
+      @include w540{
+        padding-bottom: 30px;
+      }
+      &:before{
+        position: absolute;
+        right: 10px;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: $message-border;
+        @include w540{
+          display: none;
+        }
+      }
+    }
+
+  }
+}
+
+.field{
+  float: left;
+  width: 100%;
+  .wrapper-input{
+    float: left;
+    width: 85%;
+    @include w540{
+      width: 100%;
+    }
+  }
+  input,textarea{
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 30px;
+    border:1px solid $border-input ;
+    font-size: 14px;
+    font-style: italic;
+    @include box-sizing();
+    color: $text-color;
+    @include transition( 0.5s ease 0s);
+    &:hover{
+      border-color: $text-color;
+      @include transition( 0.5s ease 0s);
+    }
+    &:focus{
+      border-color: $description-color-4;
+      @include transition( 0.5s ease 0s);
+    }
+  }
+  .btn-middle{
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    @include border-radius(0);
+    @include w540{
+      width: 100%;
+    }
+  }
+}
+
+.info-contact{
+  float: left;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.icon{
+  float: left;
+  width: 65px;
+  height: 65px;
+  border: 1px solid #ffffff;
+  @include transition( 0.5s ease 0s);
+  &.location{
+    background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat scroll 6px 9px / 401% 401%;
+    &:hover{
+      border-color: $description-color-4;
+    }
+  }
+  &.email{
+    background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat scroll -59px 6px / 401% 401%;
+    &:hover{
+      border-color: $description-color-1;
+    }
+  }
+  &.call{
+    background: transparent url("../img/sprite.png") no-repeat scroll -119px 7px/401% 401%;
+
+    &:hover{
+      border-color: $description-color-3;
+    }
+  }
+  &:hover{
+    @include transition( 0.5s ease 0s);
+  }
+}
+
+.text-contact{
+  float: left;
+  width: 72%;
+  padding-left: 15px;
+  @include box-sizing();
+  h4{
+    display: inline-block;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-color;
+    @include w768{
+      padding-bottom: 10px;
+    }
+  }
+  p{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    color: $text-color;
+  }
+}
+
+.wrapper-social{
+  float: left;
+  width: 100%;
+  padding-top: 100px;
+
+  .icon-social{
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    a{
+      position: relative;
+      float: left;
+      width: 33.3%;
+      text-align: center;
+      color: $social-color;
+      font-size: 20px;
+      @include transition( 0.5s ease 0s);
+      &:before{
+        content: "";
+        position: absolute;
+        display: none;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background: $text-color;
+
+      }
+      &:nth-child(1){
+        &:before{
+          display: block;
+        }
+      }
+      &:nth-child(2){
+        &:before{
+          display: block;
+        }
+      }
+      &:hover{
+        @include transition( 0.5s ease 0s);
+        color: $description-color-1;
+      }
+    }
+  }
+  @include w768{
+    padding-top: 50px;
+  }
+}
+
+.wrapper-copyright{
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  .copyright{
+    width:100%;
+    margin:  0 auto;
+    max-width: 300px;
+    color: $text-color;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+
